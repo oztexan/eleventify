@@ -22,7 +22,7 @@
 
       render: function () {
         var value = this.props.value;
-        const TextControl = cms.getWidget('text').control;
+        const TextControl = CMS.getWidget('text').control;
         return h(TextControl, { value: value, onChange: this.handleChange });
       }
     });
