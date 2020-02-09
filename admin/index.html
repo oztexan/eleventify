@@ -22,7 +22,7 @@
 
       render: function () {
         var value = this.props.value;
-        return h('input', { type: 'text', value: value, onChange: this.handleChange });
+        return h('textarea', { value: value, onChange: this.handleChange });
       }
     });
 
