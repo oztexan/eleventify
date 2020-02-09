@@ -25,7 +25,7 @@
         this.props.onChange = this.handleChange;
         const TextControl = cms.getWidget('text').control;
         // return h('text', { value: value, onChange: this.handleChange });
-        return (<ListControl
+        return (<TextControl
           {...this.props}
         />);
       }
