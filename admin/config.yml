@@ -40,6 +40,8 @@ collections:
   # Our songs e.g. Repertoire
   - name: "song" # Used in routes, e.g., /admin/collections/blog
     label: "Song" # Used in the UI
+    extension: "pro"
+    format: "frontmatter"
     folder: "_data/songs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -49,6 +51,8 @@ collections:
   # Our set lists e.g. Repertoire
   - name: "setlist" # Used in routes, e.g., /admin/collections/blog
     label: "Set List" # Used in the UI
+    extension: "lst"
+    format: "frontmatter"
     folder: "_data/setlists" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
