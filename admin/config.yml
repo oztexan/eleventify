@@ -47,7 +47,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "chordpro" }
   # Our set lists e.g. Repertoire
   - name: "setlist" # Used in routes, e.g., /admin/collections/blog
     label: "Set List" # Used in the UI

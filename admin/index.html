@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netlify CMS</title>
-  </head>
-  <body>
-    <!-- Include the script that builds the page and powers Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    <!-- Include Netlify Identity for authentication -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script type="module" src="/admin/preview-templates/index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netlify CMS</title>
+</head>
+
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- Include Netlify Identity for authentication -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script type="module" src="/admin/preview-templates/index.js"></script>
+
+  <script>
+    var ChordProControl = createClass({
+      handleChange: function (e) {
+        this.props.onChange(e.target.value);
+      },
+
+      render: function () {
+        var value = this.props.value;
+        return h('input', { type: 'text', value: value, onChange: this.handleChange });
+      }
+    });
+
+    var ChordProPreview = createClass({
+      render: function () {
+        return h('pre', {}, this.props.value);
+      }
+    });
+
+    CMS.registerWidget('chordpro', ChordProControl, ChordProPreview);
+  </script>
+</body>
+
 </html>
