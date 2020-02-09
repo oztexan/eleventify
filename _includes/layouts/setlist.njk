@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: setlists
+    size: 1
+    alias: setlist
+permalink: "setlists/{{ setlist | slug }}/index.html"
+section: setlist
+---
+<h2 id="setlist">{{setlist}}</h2>
+
+<ol>
+    {%- for song in setlists[setlist].songs %}
+    <li>
+        <a href="{{ "/songs/" + (song| slug)}}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ song }}</a>
+    </li>
+    {% endfor -%}
+</ol>
+

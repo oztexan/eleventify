@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+permalink: "setlists/index.html"
+section: setlists
+---
+<nav aria-labelledby="setlists">
+    <h2 id="setlists">Set Lists</h2>
+    <ol>
+        {%- for setlist in (setlists | keys) %}
+            <li><a href="{{ (setlist| slug)}}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{setlist}}</a></li>
+        {%- endfor %}
+    </ol>
+</nav>
+

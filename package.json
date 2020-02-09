@@ -1,0 +1,37 @@
+{
+  "name": "eleventify",
+  "version": "0.0.1",
+  "description": "Turn it up to 11",
+  "scripts": {
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": {
+    "name": "Chris Robertson forked from Dan Urbanowicz",
+    "email": "oztexan@gmail.com",
+    "url": "https://oztexan.github.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "luxon": "^1.21.3",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5"
+  },
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.1.4",
+    "clean-css": "^4.2.1",
+    "html-minifier": "^4.0.0",
+    "moo": "^0.5.1",
+    "uglify-es": "^3.3.9"
+  }
+}

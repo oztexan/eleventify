@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: songs
+    size: 1
+    alias: song
+permalink: "songs/{{ song | slug }}/index.html"
+section: song
+---
+{{songs[song] | object}}
