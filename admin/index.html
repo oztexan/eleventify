@@ -23,7 +23,7 @@
       render: function () {
         var value = this.props.value;
         this.props.onChange = this.handleChange;
-        const ListControl = cms.getWidget('list').control;
+        const TextControl = cms.getWidget('text').control;
         // return h('text', { value: value, onChange: this.handleChange });
         return (<ListControl
           {...this.props}
