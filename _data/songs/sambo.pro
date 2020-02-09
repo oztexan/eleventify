@@ -1,3 +1,6 @@
+{sot}
+title: Sambo
+{eot}
 ---
 title: Sambo
 ---
