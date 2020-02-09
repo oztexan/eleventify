@@ -22,7 +22,12 @@
 
       render: function () {
         var value = this.props.value;
-        return h('text', { value: value, onChange: this.handleChange });
+        this.props.onChange = this.handleChange;
+        const ListControl = cms.getWidget('list').control;
+        // return h('text', { value: value, onChange: this.handleChange });
+        return (<ListControl
+          {...this.props}
+        />);
       }
     });
 
