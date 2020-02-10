@@ -21,9 +21,19 @@
       },
 
       render: function () {
-        var value = this.props.value;
-        const TextControl = CMS.getWidget('text').control;
-        return h(TextControl, { value: value, onChange: this.handleChange });
+        const text = this;
+        console.log(text);
+
+        return h("textarea", {
+          id: this.props.forID,
+          value: this.props.value,
+          onChange: this.handleChange,
+          className: this.props.classNameWrapper,
+          onFocus: this.props.setActiveStyle,
+          onBlur: this.props.setInactiveStyle,
+          style: { minHeight: '340px' },
+          css: { fontFamily: 'Courier New' },
+        });
       }
     });
 

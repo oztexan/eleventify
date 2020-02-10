@@ -112,6 +112,23 @@ Or in debug mode:
 ```
 DEBUG=* npx @11ty/eleventy
 ```
+## Run local netlify cms
+(Beta Features)[https://www.netlifycms.org/docs/beta-features/]
+
+Modify config.yml in admin directory
+```
+# when using the default proxy server port
+local_backend: true
+
+# OR when using a custom proxy server port
+local_backend:
+  url: http://localhost:8082/api/v1
+```
+
+Run
+```
+npx netlify-cms-proxy-server
+```
 
 ## Bug reports, feature requests, etc
 
